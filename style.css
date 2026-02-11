@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, black, rgb(54, 54, 54));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transform: translateY(1.5sec);
+}
+
+h1 {
+  color: black;
+  font-family: bold;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* Circle Video */
+.video-circle {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid black;
+}
+
+.video-circle video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+p {
+  font-size: 18px;
+  font-family: bold;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  padding: 10px 22px;
+  margin: 8px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons button:first-child {
+  background: black;
+  color: white;
+}
+
+.buttons button:last-child {
+  background: #ddd;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .video-circle {
+    width: 180px;
+    height: 180px;
+  }
+}
+
