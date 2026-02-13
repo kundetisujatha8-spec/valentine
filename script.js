@@ -1,4 +1,8 @@
-const sadSteps = [
+document.addEventListener("DOMContentLoaded", function){
+    const video = document.getElementById("videoPlayer");
+  const message = document.getElementById("message");
+  
+  const sadSteps = [
   { text: "Are you sure? 😢", video: "sad.mp4" },
   { text: "Think once 💔", video: "sad1.mp4" },
   { text: "Don't break my heart 💘", video: "sad2.mp4" },
@@ -8,13 +12,13 @@ const sadSteps = [
 const happyVideo = "happy2.mp4";
 let noClickCount = 0;
 
-function yesClick() {
+window.yesClick = function() {
   video.src = happyVideo;
   video.play();
   message.innerHTML = "Yayyy 💖 i knew it 😍 Luv Uh Banda Bangaram🤗!";
 }
 
-function noClick() {
+window.noClick = function() {
   // Order lo video + message
   const step = sadSteps[noClickCount];
 
@@ -28,4 +32,4 @@ function noClick() {
   if (noClickCount >= sadSteps.length) {
     noClickCount = 0;
   }
-}
+});
